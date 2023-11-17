@@ -1,6 +1,4 @@
 package com.nithesh.orderservice.dto;
-
-import com.nithesh.orderservice.model.OrderLineItems;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;

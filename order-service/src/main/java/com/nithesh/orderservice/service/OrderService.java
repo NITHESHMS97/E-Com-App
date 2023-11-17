@@ -8,6 +8,7 @@ import com.nithesh.orderservice.dto.OrderRequest;
 import com.nithesh.orderservice.model.Order;
 import com.nithesh.orderservice.model.OrderLineItems;
 import com.nithesh.orderservice.repository.OrderRepository;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
   private final OrderRepository orderRepository;
