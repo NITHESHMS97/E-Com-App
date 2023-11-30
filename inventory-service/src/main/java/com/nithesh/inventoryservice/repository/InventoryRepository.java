@@ -1,6 +1,8 @@
 package com.nithesh.inventoryservice.repository;
 
 import com.nithesh.inventoryservice.model.Inventory;
+
+import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -9,4 +11,6 @@ import org.springframework.stereotype.Repository;
 public interface InventoryRepository extends JpaRepository<Inventory,Long> {
 
   Optional<Inventory> findBySkuCode(String skuCode);
+
+  Optional<Inventory> findBySkuCodeIn(List<String> skuCodes);
 }
